@@ -65,7 +65,7 @@ class ProductsList {
                 basket.goods.push(JSON.parse(JSON.stringify(this.goods[0])))
                 console.log(basket)
                 basket.baskerrender()
-                basket.btn()
+              
                 basket.basketlistrender(this.goods[0].id_product)
                 
              
@@ -75,7 +75,7 @@ class ProductsList {
                 basket.goods.push(JSON.parse(JSON.stringify(this.goods[1])))
                 console.log(basket)
                 basket.baskerrender()
-                basket.btn()
+              
                 basket.basketlistrender(456)
                
             }
@@ -113,7 +113,7 @@ let list = new ProductsList();
 class basketList{//массив корзины
     constructor(){
         this.goods = []
-        this.btn()  
+     
       
       
 
@@ -142,7 +142,7 @@ class basketList{//массив корзины
 
        
    btn(){  
-        let btnz=document.querySelector('button')                           
+        let btnz=document.querySelector('.btn-cart')                           
         btnz.addEventListener('click',function(){            
             let z=document.querySelector('.basketList')
             z.classList.toggle('open')      
@@ -155,4 +155,4 @@ class basketList{//массив корзины
 
 }
 let basket=new basketList()
-console.log(basket)
+basket.btn()
