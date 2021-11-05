@@ -104,23 +104,26 @@ class basketList{//массив корзины
         this.goods = []  
         this.btn()
 
+
          
             
         
     }
        
     btn(){
-        console.log(this.goods)
+  
         let btn=document.querySelector('.btn-cart')                           
         btn.addEventListener('click',function(){            
             let z=document.querySelector('.basketList')
             z.classList.toggle('open')
-            console.log(basket.goods[0].product_name)
+            z.innerHTML=`количество товаров в корзине :${basket.goods.length}`
+           basket.goods.forEach(i=> {
+               z.insertAdjacentHTML('afterbegin',`
+        <div>${i.product_name}</div>`)            
            
-            {
-                z.innerHTML=`количество товаров в корзине :${basket.goods.length}
-        <div>${basket.goods[i].product_name}</div>
-        `}
+  
+        })
+           
        
 
             
