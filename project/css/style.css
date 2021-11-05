@@ -98,3 +98,9 @@ img {
     background-color: white;
     color:black
 }
+.product__list{
+    display: flex;
+}
+.basketprice{
+    padding-left: 40px;
+}

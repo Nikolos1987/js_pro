@@ -59,14 +59,25 @@ class ProductsList {
     }
     addprod(){
         let buttons=document.querySelectorAll('.buy-btn');//добавление продуктов в корзину
-         console.log(buttons)   
-             
+            
          let click=(event)=>{
             if(event.target===buttons[0]){
                 basket.goods.push(JSON.parse(JSON.stringify(this.goods[0])))
                 console.log(basket)
-
                 basket.baskerrender()
+                basket.btn()
+                basket.basketlistrender(this.goods[0].id_product)
+                
+             
+         
+            }
+            else if(event.target===buttons[1]){
+                basket.goods.push(JSON.parse(JSON.stringify(this.goods[1])))
+                console.log(basket)
+                basket.baskerrender()
+                basket.btn()
+                basket.basketlistrender(456)
+               
             }
          }
       buttons.forEach(button=>{
@@ -101,41 +112,45 @@ let list = new ProductsList();
  
 class basketList{//массив корзины
     constructor(){
-        this.goods = []  
-        this.btn()
+        this.goods = []
+        this.btn()  
+      
+      
 
 
          
             
         
     }
+    basketlistrender(index){
+        let rend=document.querySelector('.basketList')        
+        let finded=this.goods.findIndex(item=>item.id_product==index)
+        console.log(finded)
+        rend.insertAdjacentHTML('beforeend',`<div class="product__list">     
+        <p>${this.goods[finded].product_name}</p> 
+        <p class="basketprice">${this.goods[finded].price} 
+        </div>`)
        
-    btn(){
-  
-        let btn=document.querySelector('.btn-cart')                           
-        btn.addEventListener('click',function(){            
-            let z=document.querySelector('.basketList')
-            z.classList.toggle('open')
-            z.innerHTML=`количество товаров в корзине :${basket.goods.length}`
-           basket.goods.forEach(i=> {
-               z.insertAdjacentHTML('afterbegin',`
-        <div>${i.product_name}</div>`)            
-           
-  
-        })
-           
-       
-
-            
-        })
     }
+       
+ 
     baskerrender(){
         let header=document.querySelector('.basketRend')
         header.innerText=this.goods.length      
            
             }
-       
 
+       
+   btn(){  
+        let btnz=document.querySelector('button')                           
+        btnz.addEventListener('click',function(){            
+            let z=document.querySelector('.basketList')
+            z.classList.toggle('open')      
+                
+
+            
+        })
+    }
 
 
 }
