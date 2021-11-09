@@ -5,23 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+      .color{border-color: red;}
+    </style>
 </head>
 <body>
-<input tipe="text" class='i-1' placeholder="просто текст">
+<input  tipe="text" class='i-1' placeholder="просто текст">
 
-<input tipe="text" class='i-2' placeholder="email">
+<input  tipe="text" class='i-2' placeholder="email">
 <input tipe="text" class='i-3' placeholder="phone">
 <button class="b-1">Push me</button>
 
 <p></p>
 <button class="b-2">Push me</button>
     <script>
+
     document.querySelector('.b-1').addEventListener('click',()=>{
       let dataEmail=document.querySelector('.i-2').value
+         
       let dataPhone=document.querySelector('.i-3').value
+ 
 
-      console.log(dataEmail)
-      console.log(dataPhone)
+           
+         if((dataEmail.match(/^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,4}$/)==null)){                
+          document.querySelector('.i-2').classList.add('color')
+      
+      }
+
+      
+    
 
     })
 
@@ -45,8 +57,10 @@ One: 'That's great. Well, you better get going. You don't want to be late.'
 Two: 'I'll see you next time.'
 One: 'Sure. Bye.'`
 
+
 let click=0
 let z=document.querySelector('p')
+
 z.innerText=text
 document.querySelector('.b-2').addEventListener('click',()=>{
 
