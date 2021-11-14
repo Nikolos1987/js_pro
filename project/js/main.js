@@ -57,6 +57,7 @@ const app = new Vue({
             })
     }
 })
+console.log(app.$data.products[0])
 
 
 // class List {
