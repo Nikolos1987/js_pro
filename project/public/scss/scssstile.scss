@@ -1,0 +1,268 @@
+$color: #F16D7F;
+@mixin size(){
+    font-size: 22px;
+line-height: 26px;
+color: #575757;
+}
+.shoping{
+    background: #F8F3F4;
+    &__shoping-card{
+    padding: 59px 0 59px 0;
+    display: flex;} 
+    & p{color:$color;
+        font-size: 24px;
+        line-height: 29px;
+    }       
+}
+.input-menu__left{
+    margin-top:40px ;
+    box-shadow: 15px 15px 5px 5px  #E5E5E5;
+    display: flex;
+  max-width: 652px;
+    justify-content: space-between;
+    
+        &__cards__image{
+        width: 260px;
+        height: 306px;
+    }
+    &__cards__text{
+        margin-left:31px ;
+        margin-top: 22px;
+        max-width: 220px;
+    }
+    & h1{
+        font-size: 24px;
+        line-height: 29px;
+             color: #222222;
+            
+    }
+    & span{
+        color:$color;
+        font-size: 22px;
+line-height: 26px;
+    }
+    & p{
+        @include size() ;
+    }
+    & input{
+        width: 43px;
+    }
+    &__exit{
+        margin-left: 122px;
+    }
+     
+ 
+
+}
+.input-menu{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;    
+}
+.input-menu__right{
+
+     margin-left: 20px;
+    margin-top: 113px;
+    & .region{
+        display: block;
+        width: 359px;
+        height: 44px;
+        margin-top: 21px;
+    }
+    & button{
+        width: 100px;
+        height: 34px;
+        margin-top: 24px;
+        border: 1px solid #A4A4A4;
+        background: none;
+        font-size: 11px;
+line-height: 13px;
+cursor: pointer;
+color: #4A4A4A;
+& p{
+    font-weight: 300;
+font-size: 16px;
+line-height: 19px;
+
+color: #222222;
+} 
+   }
+  
+}
+.input-menu__right__checkout{
+    margin-top: 57px;
+    background:#F5F3F3;
+ 
+    & p{
+        & span{
+            padding-left: 25px;
+            padding-right: 34px;
+        }
+        padding-top: 39px;
+        font-size: 11px;
+        line-height: 13px;
+                color: #4A4A4A;
+                text-align: right;
+    }
+    & .grand{
+        padding-top: 12px;
+        padding-bottom: 21px;
+        font-weight: 300;
+font-size: 16px;
+line-height: 19px;
+color: #222222;
+text-align: right;
+& span{
+    color: $color;
+    padding-left: 25px;
+}
+    }
+    & hr{       
+       width: 273px;
+   } 
+}
+.button-container{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   & button{
+       width: 273px;
+       height: 50px;
+       background: $color;
+       border:none;
+       cursor: pointer;
+       font-weight: 300;
+font-size: 16px;
+line-height: 19px;
+color: #FFFFFF;
+margin-bottom: 42px;
+          }
+  
+}
+.cards{
+    margin-top: 54px;
+    max-width: 650px;
+}
+.input-menu__left__button{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 72px;
+    & button{
+        width: 234px;
+        height: 49px;
+        border: 1px solid #A4A4A4;
+        cursor: pointer;
+        background: none;
+    }
+
+}
+.regestration{
+display:flex;
+flex-direction:column;
+width: 359px;
+padding-top: 64px;
+& p1{
+    font-weight: 300;
+font-size: 13px;
+line-height: 16px;
+
+color: #B1B1B1;
+
+}
+&__sex{
+    margin-bottom:31px;
+}
+& p{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    padding-bottom:20px;
+    
+    color: #222222;
+}
+& input{
+    margin-bottom: 20px;
+    height: 45px;
+    border: 1px solid #A4A4A4;
+    padding-left: 20px;
+    
+color: #B1B1B1;
+}  
+& label{ 
+    & input{
+        margin: 0;
+        margin-right: 10px;
+        padding: 0;
+    }
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-weight: 300;
+font-size: 11px;
+line-height: 10px;
+color: #000000;}
+& label:last-child{
+    margin-left: 20px;}
+&__sex{
+    display: flex;
+    height: 20px;
+}
+& button{
+    margin-top: 39px;
+    transition:1s;
+    width: 167px;
+    height: 50px;
+    border:none;
+    cursor: pointer;
+    background: $color;
+    font-size: 14px;
+line-height: 17px;
+color: #FFFFFF;
+& span{
+    margin-right: 20px;
+}
+} 
+& button:hover{
+    transform: rotate(30deg);
+    border-radius: 10px;
+    background: blue;
+
+}
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1140px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+.benefit{
+    margin-right: 62px;
+    margin-top: 64px;
+    max-width: 538px;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 29px;
+    font-family: Lato;    
+    color: #000000;
+    & h1{              
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 29px;
+        font-family: Lato;    
+        color: #000000;
+        padding-bottom: 21px;
+    }
+    & .sale{
+        padding-top: 21px;
+    }
+    & p{
+        padding-bottom:16px ;
+    }
+    & i{
+        padding-right: 23px;
+    }
+}
+
+
