@@ -367,7 +367,7 @@ margin-left: 10px;
      background-repeat: no-repeat;
     background-position: center;
     background-color:#F7F7F7;;
-      
+  
       }
   .slide__button{
       width: 47px;
@@ -387,6 +387,7 @@ fill:#F16D7F;
     align-items: center;
 }
 .add{ 
+    z-index: 100;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -397,7 +398,8 @@ fill:#F16D7F;
     
 }
 .add__woomen{
-    z-index: 1;
+    text-align: center;
+width: 100%;
     color: crimson;
     background: white;
     font-weight: 300;
