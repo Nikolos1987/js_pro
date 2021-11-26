@@ -8,6 +8,7 @@ a{
 header{
     background: black;
     padding:17px 0 18px 0;
+    position: relative;
 }
 .container {
     max-width:1140px;
@@ -583,3 +584,31 @@ details[open]>summary {
     display: flex;
     justify-content: space-between;
 }
+.header__burgermenu__basket{
+    background: wheat;
+    width: 500px;
+    height: 800px;
+    position: absolute;
+  z-index: 1;
+    right: 20px;
+    top: 70px;
+}
+/* .intro{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    width: 300px;
+} */
+.goods{
+    justify-content: space-between;
+    display: flex;
+    background-color: tomato;
+    height: 13%;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+.open{opacity: 0;}
+
